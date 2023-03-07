@@ -1,0 +1,24 @@
+method: UOT
+dataset:
+  name: Office31
+  source_domain: dslr
+  target_domain: amazon
+  n_share: 31 # number of classes to be shared
+  n_source_private: 0 # number of classes in source private domain
+  n_total: 31 # number of classes in total
+dataloader:
+  class_balance: true
+  num_workers: 4
+  batch_size: 72
+# train setting
+print_interval: 100
+test_interval: 500
+max_step: 10000
+# training parameters
+lr: 0.0001
+weight_decay: 0.0005
+# weight between loss
+param_b: 0.7
+alpha: 0.002
+beta: 0.1
+lambda_t: 0.01

@@ -1,0 +1,24 @@
+method: UOT
+dataset:
+  name: VisDA
+  source_domain: train
+  target_domain: validation
+  n_share: 6 # number of classes to be shared
+  n_source_private: 3 # number of classes in source private domain
+  n_total: 12 # number of classes in total
+dataloader:
+  class_balance: true
+  num_workers: 4
+  batch_size: 72
+# train setting
+print_interval: 100
+test_interval: 500 
+max_step: 10000
+# training parameters
+lr: 0.003
+weight_decay: 0.0005
+# weight between loss
+param_b: 0.4
+alpha: 0.0005
+beta: 0.2
+lambda_t: 0.01

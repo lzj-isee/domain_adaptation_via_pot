@@ -1,0 +1,24 @@
+method: PJDOT
+dataset:
+  name: OfficeHome
+  source_domain: Clipart
+  target_domain: Product
+  n_share: 65 # number of classes to be shared
+  n_source_private: 0 # number of classes in source private domain
+  n_total: 65 # number of classes in total
+dataloader:
+  class_balance: false
+  num_workers: 4
+  batch_size: 72
+# train setting
+print_interval: 100
+test_interval: 500
+max_step: 10000
+# training parameters
+lr_g: 0.0003
+lr_c: 0.003
+weight_decay: 0.0005
+# weight between loss
+param_b: 0.6
+alpha: 0.01
+beta: 0.1

@@ -1,0 +1,1 @@
+python3 main.py --config ./configs/OVANet/office31_A2D_opda.yaml --gpu 3

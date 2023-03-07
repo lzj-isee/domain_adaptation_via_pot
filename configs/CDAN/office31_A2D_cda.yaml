@@ -1,0 +1,20 @@
+method: CDAN
+dataset:
+  name: Office31
+  source_domain: amazon
+  target_domain: dslr
+  n_share: 31 # number of classes to be shared
+  n_source_private: 0 # number of classes in source private domain
+  n_total: 31 # number of classes in total
+dataloader:
+  class_balance: true
+  num_workers: 8
+  batch_size: 36
+# train setting
+print_interval: 100
+test_interval: 500
+max_step: 10000
+# training parameters
+lr: 0.0003
+weight_decay: 0.0005
+trade_off: 1.0
